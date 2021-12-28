@@ -1,0 +1,2 @@
+class AskedQuestion < ApplicationRecord
+end

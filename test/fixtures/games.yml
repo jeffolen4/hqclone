@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  players_all: 1
+  questions_asked: 1
+  current_state: 1
+  created_at: 2021-12-04 13:47:38
+  updated_at: 2021-12-04 13:47:38
+
+two:
+  players_all: 1
+  questions_asked: 1
+  current_state: 1
+  created_at: 2021-12-04 13:47:38
+  updated_at: 2021-12-04 13:47:38

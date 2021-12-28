@@ -1,0 +1,22 @@
+<% unless flash.nil? %>
+  <div class="container">
+    <div class="row">
+      <% flash.each do |type, val| %>
+        <% next if val == nil %>
+        <% flash[type].each do |msg| %>
+          <% case type %>
+          <% when :info %>
+            <div class="colspan-12 alert alert-info">
+          <% when "success" %>
+            <div class="colspan-12 alert alert-success">
+          <% when "error" %>
+            <div class="colspan-12 alert alert-danger">
+          <% end %>
+          <%= sanitize msg %>
+          </div>
+        <% end %>
+        <% flash[type] = nil %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,20 @@
+<div id=game-id data-game-id=<%= @game.id %>></div>
+
+<%= render "shared/flash" %>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-3">
+      <%= render "games/summary" %>
+    </div>
+
+    <div class="col-sm-9">
+      <hr>
+      <div class="actions">
+        <%= button_to "Join Game", { action: "waiting_room"}, { class: "btn btn-primary" } %>
+      </div>
+    </div>
+
+  </div>
+</div>

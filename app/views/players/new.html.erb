@@ -1,0 +1,16 @@
+<%= render "shared/flash" %>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-3">
+      <%= render "games/summary" %>
+    </div>
+
+    <div class="col-sm-9">
+      <hr>
+        <%= render "form", player: @player || Player.new %><%= link_to 'Back', root_path, class: "pad-left" %>
+    </div>
+
+  </div>
+</div>

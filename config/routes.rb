@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
-  get 'games/:id' => 'games#show'
-  root 'game#index'
-  get 'game/index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  resources :users, only: [:new, :create, :index, :show]
+  resources :sessions, only: [:new, :create, :destroy]
+
+  # get 'sessions/new'
+  # get 'sessions/create'
+  # get 'sessions/destroy'
+  # resources :users
+  resources :questions
+  #get 'games/:id' => 'games#show'
+  root 'games#index'
+
+  get "games/join", to: "games#join", as: :game_join
+  post "games/waiting_room", to: "games#waiting_room", as: :waiting_room
+
+  resources :games
+
+  resources :players
+
 end
